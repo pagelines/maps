@@ -15,7 +15,7 @@ class PLMaps extends PageLinesSection {
 	public $lat = '37.774929';
 	public $lng = '-122.419416';
 	public $desc = '<a href="http://www.pagelines.com">PageLines</a>';
-	public $help = 'To find map the coordinates use this easy tool: <a href="http://www.mapcoordinates.net/en">ww.mapcoordinates.net</a>';
+	public $help = 'To find map the coordinates use this easy tool: <a target="_blank" href="http://www.mapcoordinates.net/en">ww.mapcoordinates.net</a>';
 
 	function section_styles(){
 
