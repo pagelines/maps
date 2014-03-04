@@ -1,11 +1,19 @@
+
+
+
 Object.keys = Object.keys || function(o) {
-    var result = [];
+	
+    var result = []
+
     for(var name in o) {
+	
         if (o.hasOwnProperty(name))
-          result.push(name);
+          result.push(name)
+
     }
-    return result;
-};
+
+    return result
+}
 
 jQuery(document).ready(function($){
 
@@ -34,22 +42,23 @@ jQuery(document).ready(function($){
 	// console.log(enableAnimation)
 	// console.log(animationDelay)
 	// console.log(enableAnimation)
+	
 	var mapOptions = {
-      center: latLng,
-      zoom: zoomLevel,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      scrollwheel: false,
-      panControl: false,
-	  zoomControl: enableZoom,
-	  zoomControlOptions: {
-        style: google.maps.ZoomControlStyle.LARGE,
-        position: google.maps.ControlPosition.LEFT_CENTER
-   	  },
-	  mapTypeControl: false,
-	  scaleControl: false,
-	  streetViewControl: false
+		center: latLng,
+		zoom: zoomLevel,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		scrollwheel: false,
+		panControl: false,
+		zoomControl: enableZoom,
+		zoomControlOptions: {
+			style: google.maps.ZoomControlStyle.LARGE,
+			position: google.maps.ControlPosition.LEFT_CENTER
+		},
+		mapTypeControl: false,
+		scaleControl: false,
+		streetViewControl: false
 
-    };
+    }
 
     var div = "pl_map_" + id
 
