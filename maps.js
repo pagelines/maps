@@ -95,7 +95,7 @@ jQuery(document).ready(function($){
 		} else {
 			enableAnimation = false
 		}
-		console.log(map_data)
+		plPrint(map_data)
 		for (var i = 1; i <= Object.keys(map_data).length; i++) {
 
 			(function(i) {
