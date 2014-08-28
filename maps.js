@@ -34,14 +34,9 @@ jQuery(document).ready(function($){
 	,	centerlng = parseFloat(map_main.lng) || -122.3902466
 	,	markerImg = map_main.image
 	,	enableZoom = map_main.zoom_enable || true
-	,	latLng = new google.maps.LatLng(centerlat,centerlng);
-
-	// console.log(zoomLevel)
-	// console.log(markerImg)
-	// console.log(enableZoom)
-	// console.log(enableAnimation)
-	// console.log(animationDelay)
-	// console.log(enableAnimation)
+	,	latLng = new google.maps.LatLng(centerlat,centerlng)
+	,	mobile = jQuery( 'body' ).hasClass('pl-res-phone' ) || false
+	,	tablet = jQuery( 'body' ).hasClass('pl-res-tablet' ) || false
 	
 	var mapOptions = {
 		center: latLng,
@@ -60,6 +55,16 @@ jQuery(document).ready(function($){
 
     }
 
+	if( mobile || tablet ) {
+		mapOptions.minZoom = zoomLevel
+		mapOptions.maxZoom = zoomLevel
+		mapOptions.draggable = false
+		mapOptions.scrollwheel = false
+		mapOptions.panControl = false
+		mapOptions.zoomControl = false
+	}
+	
+	
     var div = "pl_map_" + id
 
 	var map = new google.maps.Map(document.getElementById(div), mapOptions);
